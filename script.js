@@ -1,18 +1,33 @@
 const form = document.querySelector("form");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+
 
 function sendEmail(){
+  const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
+
     Email.send({
-      Host : "smtp.elasticemail.com",
-      Username : "anassaitbelagouim@gmail.com",
-      Password : "51515AC12F13ACFA7DBF302B67C1EB8EB43F",
+      SecureToken : "6980137b-90c3-4dba-aa63-9ad5c92e28ee",
       To : 'anassaitbelagouim@gmail.com',
       From : "anassaitbelagouim@gmail.com",
-      Subject : "This is the subject",
-      Body : "And this is the body"
+      Subject : subject.value,
+      Body : bodyMessage
   }).then(
-    message => alert(message)
+    message => {
+      if (message == "OK") {
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully!",
+          icon: "success"
+        });
+      }
+    }
   );
 }
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
