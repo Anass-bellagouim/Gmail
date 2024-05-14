@@ -14,11 +14,22 @@ body{
     background: #1f242d;
 }
 
+
+
+
+
+
+
+/* here we add contact section desing */
 .contact h2{
     font-size: 40px;
     color: #ededed;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.contact span{
+    color: #0ef;
 }
 
 .contact form{
@@ -47,32 +58,12 @@ form .input-box{
     margin: 12px 0;
 }
 
-.field.error.item {
-    border-color: #d93025;
-}
-
 .field .item::placeholder{
     color: rgba(255, 255, 255, .3);
 }
 
-.field .error-txt{
-    font-size: 14.5px;
-    color: #d93025;
-    text-align: left;
-    margin: -5px 0 10px;
-    display: none;
-}
-
-.field.error .error-txt{
-    display: block;
-}
-
 form .textarea-field .item{
     resize: none;
-}
-
-form .textarea-field .error-txt{
-    margin-top: -10px;
 }
 
 form button {

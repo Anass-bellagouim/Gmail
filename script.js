@@ -1,3 +1,4 @@
+// here we add contact section desing
 const form = document.querySelector("form");
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
